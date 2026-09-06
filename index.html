@@ -91,6 +91,32 @@
       width: 3.5em; height: 3.5em;
       object-fit: contain;
     }
+    .hero-venue {
+      font-size: 1.35rem; font-weight: 600;
+      font-family: 'Google Sans', 'Noto Sans', sans-serif;
+      color: #0048A6;
+      margin: 0 auto 14px;
+      max-width: var(--max-w);
+    }
+    .hero-authors {
+      font-size: 1.2rem;
+      font-family: 'Google Sans', 'Noto Sans', sans-serif;
+      margin: 0 auto 6px;
+      max-width: 680px;
+    }
+    .hero-authors a {
+      color: hsl(204, 86%, 53%);
+      text-decoration: none;
+      font-weight: 400;
+    }
+    .hero-authors a:hover { text-decoration: underline; }
+    .hero-authors sup { font-size: 0.65em; }
+    .hero-affiliations {
+      font-size: 0.8rem; color: var(--text-dim);
+      margin: 0 auto 14px;
+      max-width: var(--max-w);
+    }
+    .hero-affiliations sup { font-size: 0.65em; }
     .hero p {
       font-size: 1rem; color: var(--text-sec);
       max-width: min(100%, 108ch);
@@ -443,16 +469,33 @@
 <!-- ═══ Hero ═══ -->
 <div class="hero">
   <h1><img class="hero-icon" src="icon.png" alt=""><span>StressDream: Steering Video World Models<br>for Robust Policy Evaluation and Improvement</span></h1>
-  <p>We present <strong>StressDream</strong>, an inference-time method that optimizes diffusion noise to steer video world models toward plausible, high-impact outcomes — enabling robust evaluation and improvement of robotic policies.</p>
+  <div class="hero-venue">Conference on Robot Learning (CoRL) 2026</div>
+  <div class="hero-authors">
+    <a href="https://junwon.me/" target="_blank" rel="noopener noreferrer">Junwon Seo</a><sup>1</sup>,
+    <a href="https://sushantveer.github.io/" target="_blank" rel="noopener noreferrer">Sushant Veer</a><sup>2</sup>,
+    <a href="https://thomasrantian.github.io/" target="_blank" rel="noopener noreferrer">Ran Tian</a><sup>2</sup>,
+    <a href="https://wenhao.pub/" target="_blank" rel="noopener noreferrer">Wenhao Ding</a><sup>2</sup>,
+    <a href="https://research.nvidia.com/person/apoorva-sharma" target="_blank" rel="noopener noreferrer">Apoorva Sharma</a><sup>2</sup>,
+    <a href="https://faculty.washington.edu/kymleung/" target="_blank" rel="noopener noreferrer">Karen Leung</a><sup>2,3</sup>,
+    <a href="https://research.nvidia.com/person/ed-schmerling" target="_blank" rel="noopener noreferrer">Edward Schmerling</a><sup>2</sup>,
+    <a href="https://web.stanford.edu/~pavone/index.html" target="_blank" rel="noopener noreferrer">Marco Pavone</a><sup>2,4</sup>,
+    <a href="https://www.cs.cmu.edu/~abajcsy/" target="_blank" rel="noopener noreferrer">Andrea Bajcsy</a><sup>1</sup>
+  </div>
+  <div class="hero-affiliations">
+    <sup>1</sup> Carnegie Mellon University &nbsp;
+    <sup>2</sup> NVIDIA Research &nbsp;
+    <sup>3</sup> University of Washington &nbsp;
+    <sup>4</sup> Stanford University
+  </div>
   <div class="hero-links">
-    <span class="hero-btn tentative">
+    <a class="hero-btn" href="https://arxiv.org/abs/2606.00267" target="_blank" rel="noopener noreferrer">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      arXiv <span style="font-size:0.75em;font-weight:400">(Coming Soon!)</span>
-    </span>
-    <span class="hero-btn tentative">
+      arXiv &#8599;
+    </a>
+    <a class="hero-btn" href="https://github.com/CMU-IntentLab/StressDream" target="_blank" rel="noopener noreferrer">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      Code <span style="font-size:0.75em;font-weight:400">(Coming Soon!)</span>
-    </span>
+      Code &#8599;
+    </a>
     <a class="hero-btn" href="dubins/index.html">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3l-7 3.5a3 3 0 1 0 0 5L15 18a3 3 0 1 0 1-1.73l-7-3.5a3 3 0 0 0 0-2.54l7-3.5A3 3 0 1 0 18 3z"/></svg>
       Dubins Car Experiment &#8599;
@@ -465,12 +508,18 @@
   <div class="hero-video-wrap">
     <video src="video.mp4" controls autoplay muted loop playsinline></video>
   </div>
+  <br>
+  <p>We present <strong>StressDream</strong>, an inference-time method that optimizes diffusion noise to steer video world models toward plausible, high-impact outcomes — enabling robust evaluation and improvement of robotic policies.</p>
 </div>
 
 <!-- ═══ Content ═══ -->
 <div class="content" id="content"></div>
 
-<footer>StressDream</footer>
+<footer>
+  <span class="footer-name">Junwon Seo</span> · Contact:
+  <a href="mailto:junwonse@andrew.cmu.edu">junwonse@andrew.cmu.edu</a> · Website:
+  <a href="https://junwon.me" target="_blank" rel="noopener noreferrer">junwon.me</a>
+</footer>
 
 <script>
 // ── Play/pause SVG icons (avoids emoji rendering quirks on mobile) ──
@@ -2184,6 +2233,18 @@ function build() {
     <p style="font-size:0.8rem;color:var(--text-dim);margin-top:8px;line-height:1.6;"><strong>Policy improvement via robust evaluation.</strong> VLA policy finetuning with StressDream improves the <a href="https://github.com/Physical-Intelligence/openpi" target="_blank" rel="noopener noreferrer">π₀.₅</a> VLA policy robustly.</p>`;
   sPolicyImprove.insertBefore(piFig, sPolicyImprove.children[2]);
   root.appendChild(sPolicyImprove);
+
+  // ── BibTeX ──
+  const sBib = document.createElement('div');
+  sBib.className = 'section'; sBib.id = 'bibtex';
+  sBib.innerHTML = `<h2 class="section-title">BibTeX</h2>
+    <pre style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px 24px;font-size:0.82rem;line-height:1.7;overflow-x:auto;color:var(--text-main);white-space:pre;">@inproceedings{seo2026stressdream,
+  title     = {StressDream: Steering Video World Models for Robust Policy Evaluation and Improvement},
+  author    = {Seo, Junwon and Veer, Sushant and Tian, Ran and Ding, Wenhao and Sharma, Apoorva and Leung, Karen and Schmerling, Edward and Pavone, Marco and Bajcsy, Andrea},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2026}
+}</pre>`;
+  root.appendChild(sBib);
 
 }
 

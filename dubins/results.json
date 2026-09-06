@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_from": "steering evaluation scripts",
+    "generated_from": "/home/junwon/robust/diffusion_world_model/scripts/steering",
     "notes": "Each entry in 'figures' is a ready-to-plot spec. 'bars' lists {label, value, color, [err_95]} per bar. Error bars are 1.96 * std (\u224895% CI). GT lines come from gt_worst_case_margins_eval.json."
   },
   "palette": {
